@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Consolas, Menlo, 'Droid Sans Mono', monospace;
+  background-color: lightgray;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+.letter {
+  margin-top: 20px;
+  font-size: 3rem;
+  color: darkred;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  margin-right: 10px;
+}
+
+.picked-letters {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.letter-element {
+  margin: 5px;
+  font-size: 1.3rem;
+  padding: 10px;
+  /* border: 1px solid gray; */
+  border-radius: 4px;
+}
+
+.good {
+  color: white;
+  background-color: #16a085;
+}
+
+.bad {
+  color: white;
+  background-color: #c0392b;
+}

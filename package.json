@@ -1,0 +1,21 @@
+{
+  "name": "adedanha-pwa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.12.10",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/preset-env": "7.12.11",
+    "babel-loader": "8.2.2",
+    "css-loader": "5.0.1",
+    "style-loader": "2.0.0",
+    "webpack": "5.11.1",
+    "webpack-cli": "4.3.1",
+    "webpack-dev-server": "3.11.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve"
+  }
+}
