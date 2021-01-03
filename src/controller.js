@@ -5,13 +5,14 @@ export default class Controller {
     this.model = model;
     this.view = view;
 
-    this.view.bindShuffleClickTo(this.onShuffle);
-    this.view.bindPickLetterClickTo(this.onPickLetter);
-    this.view.bindRestartClickTo(this.onRestart);
-    this.view.renderAllLetters(model.getPickedLetters());
+    this.view.bindShuffleClickTo(this.handleShuffle);
+    this.view.bindPickLetterClickTo(this.handlePickLetter);
+    this.view.bindRestartClickTo(this.handleRestart);
+
+    this.renderAllLetters();
   }
 
-  onShuffle = (maxCount = SHUFFLING_COUNT) => {
+  handleShuffle = (maxCount = SHUFFLING_COUNT) => {
     let interval = null;
 
     this.view.startShuffle();
@@ -37,14 +38,18 @@ export default class Controller {
     }, 40);
   };
 
-  onPickLetter = () => {
+  handlePickLetter = () => {
     this.model.pickLetter();
-    this.view.renderAllLetters(this.model.getPickedLetters());
+    this.renderAllLetters();
   };
 
-  onRestart = () => {
+  handleRestart = () => {
     this.model.restart();
     this.view.restart();
-    this.view.renderAllLetters(this.model.getPickedLetters());
+    this.renderAllLetters();
   };
+
+  renderAllLetters() {
+    this.view.renderAllLetters(this.model.getPickedLetters());
+  }
 }
